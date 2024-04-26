@@ -21,20 +21,20 @@ public class Snippets {
     open("/", AuthenticationType.BASIC,
             new BasicAuthCredentials("", "user", "password"));
 
-    Selenide.back();
-    Selenide.refresh();
+    Selenide.back(); // Страница назад
+    Selenide.refresh(); // Обновление страницы
 
-    Selenide.clearBrowserCookies();
-    Selenide.clearBrowserLocalStorage();
+    Selenide.clearBrowserCookies(); // Очищаем куки
+    Selenide.clearBrowserLocalStorage(); // Очищает историю
     executeJavaScript("sessionStorage.clear();"); // no Selenide command for this yet
 
-    Selenide.confirm(); // OK in alert dialogs
-    Selenide.dismiss(); // Cancel in alert dialogs
+    Selenide.confirm(); // Нажать оке на алерте
+    Selenide.dismiss(); // Нажать кнопку отменить на алерте
 
-    Selenide.closeWindow(); // close active tab
-    Selenide.closeWebDriver(); // close browser completely
+    Selenide.closeWindow(); // Закрыть окно браузера
+    Selenide.closeWebDriver(); // Закрыть браузер
 
-    Selenide.switchTo().frame("new");
+    Selenide.switchTo().frame("new"); //
     Selenide.switchTo().defaultContent(); // return from frame back to the main DOM
 
     Selenide.switchTo().window("The Internet");
